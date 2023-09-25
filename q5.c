@@ -10,16 +10,16 @@ int main(void)
 	
 //	get user inputs 
 	printf("Enter weight - item1: ");
-	scanf("%d", &item1_weight);
+	scanf("%f", &item1_weight);
 	
 	printf("No. of item1: ");
-	scanf("%d", &item1_value);
+	scanf("%f", &item1_value);
 	
 	printf("Enter weight - item2: ");
-	scanf("%d", &item2_weight);
+	scanf("%f", &item2_weight);
 	
 	printf("No. of item2: ");
-	scanf("%d", &item2_value);
+	scanf("%f", &item2_value);
 	
 //	calculate total value of item1 and item2
 	tot_value = item1_value + item2_value;
@@ -27,7 +27,7 @@ int main(void)
 //	calculate avg 
 	avg = ((item1_weight * item1_value) + (item2_weight * item2_value)) / tot_value;
 	
-	printf("%f", avg);
+	printf("Average Value = %f", avg);
 	
 	return 0;
 }
