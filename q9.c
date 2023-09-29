@@ -33,22 +33,22 @@ int main(void)
 	printf("Input the fifth number: ");
 	scanf("%d", &num_5);
 	
-	if(num_1 % 2 ==0){
+	if(num_1 % 2 !=0){
 		sum+=num_1;
 	}
-	if(num_2 % 2 ==0){
+	if(num_2 % 2 !=0){
 		sum+=num_2;
 	}
-	if(num_3  % 2 ==0){
+	if(num_3  % 2 !=0){
 		sum+=num_3;
 	}
-	if(num_4 % 2 ==0){
+	if(num_4 % 2 !=0){
 		sum+=num_4;
 	}
-	if(num_5 % 2 == 0){
+	if(num_5 % 2 != 0){
 		sum+=num_5;
 	}
 	
-	printf("%d", sum);
+	printf("Sum of all odd values: %d", sum);
 	return 0;
 }
