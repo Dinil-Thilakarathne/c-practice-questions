@@ -1,3 +1,29 @@
+- [Basic](#basic)
+	- [Q1](#q1)
+	- [Q2](#q2)
+	- [Q3](#q3)
+	- [Q4](#q4)
+	- [Q5](#q5)
+- [Control flow](#control-flow)
+	- [Q1](#q1-1)
+	- [Q2](#q2-1)
+	- [Q3](#q3-1)
+	- [Q4](#q4-1)
+	- [Q5](#q5-1)
+	- [Q6](#q6)
+	- [Q7](#q7)
+	- [Q8](#q8)
+	- [Q9](#q9)
+	- [Q10](#q10)
+	- [Q11](#q11)
+	- [Q12](#q12)
+- [Basic Algorithm](#basic-algorithm)
+	- [Q1](#q1-2)
+	- [Q2](#q2-2)
+	- [Q3](#q3-2)
+
+# Basic
+
 ## Q1
 Write a C program to compute the perimeter and area of a rectangle with a height of 7 inches and width of 5 inches.
 ```c
@@ -44,34 +70,6 @@ int main(void)
 ```
 
 ## Q3
-input integer numbers from the keyboard and calculate total and display it until user inputs -1.
-
-```c
-#include <stdio.h>
-
-int main(void)
-{
-//	decalre variables 
-	int num,tot = 0;
-	
-//	get user input and assign value to num variable
-	printf("Enter your number : ");
-	scanf("%d", &num);
-	
-	while(num != -1)
-	{
-		tot+=num;
-//		printf("total is : %d\n", tot);
-		
-		printf("Enter your next number ( Enter -1 for stop)  :");
-		scanf("%d", &num);
-	}
-	printf("total is : %d\n", tot);
-
-}
-```
-
-## Q4
 Write a C program to compute the perimeter and area of a circle with a given radius.
 
 ```c
@@ -100,7 +98,7 @@ int main(void)
 }
 ```
 
-## Q5
+## Q4
 Write a C program that accepts two item's weight and number of purchases (floating point values) and calculates their average value.
 >logic : avg = ((item1_weight * item1_value) + (item2_weight * item2_value)) / (item1_value + item2_value)
 
@@ -137,7 +135,7 @@ int main(void)
 }
 ```
 
-## Q6
+## Q5
 Write a C program that accepts an employee's ID, total worked hours in a month and the amount he received per hour.
 
 Print the ID and salary (with two decimal places) of the employee for a particular month. 
@@ -186,7 +184,38 @@ int main(void)
 }
 ```
 
-## Q7
+# Control flow
+
+## Q1
+input integer numbers from the keyboard and calculate total and display it until user inputs -1.
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	decalre variables 
+	int num,tot = 0;
+	
+//	get user input and assign value to num variable
+	printf("Enter your number : ");
+	scanf("%d", &num);
+	
+	while(num != -1)
+	{
+		tot+=num;
+//		printf("total is : %d\n", tot);
+		
+		printf("Enter your next number ( Enter -1 for stop)  :");
+		scanf("%d", &num);
+	}
+	printf("total is : %d\n", tot);
+
+}
+```
+
+
+## Q2
 Write a C program that accepts three integers and finds the maximum of three
 
 ```
@@ -240,7 +269,7 @@ int main(void)
 }
 ```
 
-## Q8
+## Q3
 Given a five digit integer, print the sum of its digits.
 
 ```c
@@ -268,7 +297,7 @@ int main() {
 }
 ```
 
-## Q9
+## Q4
 Write a C program that reads 5 numbers and sums all odd values between them.
 
 ```
@@ -328,7 +357,7 @@ int main(void)
 }
 ```
 
-## Q10
+## Q5
 Write a C program that reads three floating-point values and checks if it is possible to make a triangle with them. Determine the perimeter of the triangle if the given values are valid.
 
 
@@ -371,7 +400,7 @@ int main(void)
 }
 ```
 
-## Q11
+## Q6
 Write a C program that reads two integers and checks whether they are multiplied or not.
 
 
@@ -407,7 +436,7 @@ int main(void)
 }
 ```
 
-## Q12
+## Q7
 Write a C program that reads 5 numbers and counts the number of positive numbers and negative numbers.
 
 ```c
@@ -446,7 +475,7 @@ int main(void)
 }
 ```
 
-## Q13
+## Q8
 Write a C program to check whether a given integer is positive even, negative even, positive odd or negative odd. Print even if the number is 0.
 
 ```
@@ -480,7 +509,7 @@ int main(void)
 }
 ```
 
-## Q14
+## Q9
 Write a C program to read temperature in centigrade and display a suitable message according to the temperature state below:
 
 
@@ -529,7 +558,7 @@ int main(void)
 }
 ```
 
-## Q15
+## Q10
 Write a C program to check whether a triangle can be formed with the given values for the angles.
 
 
@@ -572,7 +601,7 @@ int main(void)
 }
 ```
 
-## Q16
+## Q11
 Write a program in C to read any Month Number in integer and display the number of days for this month.
 
 ```
@@ -624,7 +653,7 @@ int main(vodi)
 }
 ```
 
-## Q17
+## Q12
 Write a C program to accept a coordinate point in an XY coordinate system and determine in which quadrant the coordinate point lies.
 
 
@@ -660,7 +689,48 @@ int main(void)
 }
 ```
 
-## Q18
+# Basic Algorithm
+
+## Q1
+Write a C program to compute the sum of the three given integers with some exceptions.
+If any of the values is in the range 10..20 inclusive, then that value will be considered as 0, except for 13 and 17.
+
+```
+Test Data : 
+16
+11
+13
+
+Expected Output : 13
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	variables declarations
+	int num, sum, count;
+	
+//	get user inputs three times 
+	for(count=0 ; count <3; count++){
+		printf("Enter your number : ");
+		scanf("%d", &num);
+		
+//		check if the input is valid 
+		if((num > 10 && num <20) && (num!=13 && num!=17)){
+			num = 0;
+		}
+		sum+=num;
+	}
+	
+//	display output 
+	printf("sum is : %d", sum);
+	return 0;
+}
+```
+
+## Q2
 Given a five digit integer, print the sum of its digits.
 
 ```
@@ -694,3 +764,47 @@ int main() {
 }
 ```
 
+## Q3
+Write a C program to check two given integers and return the one nearest to 13 without crossing over. 
+Return 0 if both numbers go over.
+
+```
+Test cases :
+printf("%d", test(4, 5));
+printf("\n%d", test(7, 12));
+printf("\n%d", test(10, 13));
+printf("\n%d", test(17, 33));
+
+Expected Output : 
+5
+12
+13
+0
+```
+
+```c
+#include <stdio.h>
+int test(int x, int y);
+
+int main(void)
+{
+//	variables declaration
+	int num1, num2;
+	
+//	get user inputs 
+	printf("Enter your two numbers (separate by one space) : ");
+	scanf("%d %d", &num1, &num2);
+	
+//	display output 
+	printf("%d", test(num1, num2));
+	return 0;
+}
+
+int test(int x, int y)
+{
+	if(x > 13 && y >13) return 0;
+	if(x <= 13 && y > 13) return x;
+	if(x > 13 && y <=13) return y;
+	return x > y? x : y;
+}
+```
