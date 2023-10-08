@@ -241,6 +241,32 @@ int main(void)
 ```
 
 ## Q8
+Given a five digit integer, print the sum of its digits.
+
+```c
+#include <stdio.h>
+
+int main() {
+	
+    //	variables decralation
+    int n, sum;
+
+    // get user inout 
+    printf("Enter your number : ");
+    scanf("%d", &n);
+
+    // calculate sum 
+    while (n >0) {
+        sum += n %10;
+        n /= 10;
+    }
+
+    // display output
+    printf("%d", sum);
+
+    return 0;
+}
+```
 
 ## Q9
 Write a C program that reads 5 numbers and sums all odd values between them.
