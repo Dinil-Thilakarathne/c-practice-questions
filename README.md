@@ -21,6 +21,7 @@
 	- [Q1](#q1-2)
 	- [Q2](#q2-2)
 	- [Q3](#q3-2)
+	- [Q4](#q4-2)
 
 # Basic
 
@@ -806,5 +807,44 @@ int test(int x, int y)
 	if(x <= 13 && y > 13) return x;
 	if(x > 13 && y <=13) return y;
 	return x > y? x : y;
+}
+
+```
+## Q4
+Check two given integers, each in the range 10..99. Return true if a digit appears in both numbers, such as the 3 in 13 and 33
+
+```
+Test cases :
+    11, 21
+    11, 20
+    10, 10
+
+Expected Output : 
+true
+false
+true
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	int num1, num2;
+	
+	do{
+		printf("Enter your two numbers (separate by one space): ");
+		scanf("%d %d", &num1, &num2);
+		
+	}while((num1 < 10 && num >99) && (num2 < 10 && num2 > 99));
+	
+	if((num1 / 10 == num2 /2 || num1 / 10 == num2 % 10) || (num1 % 10 == num2 % 10 || num1 % 10 == num2 / 10 ))
+		printf("true");
+	else{
+		printf('false');
+	}
+	
+	
+	return 0;
 }
 ```
