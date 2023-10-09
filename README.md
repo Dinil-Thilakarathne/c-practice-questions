@@ -22,6 +22,10 @@
 	- [Q2](#q2-2)
 	- [Q3](#q3-2)
 	- [Q4](#q4-2)
+- [Patterns](#patterns)
+	- [Q1](#q1-3)
+	- [Q2](#q2-3)
+	- [Q3](#q3-3)
 
 # Basic
 
@@ -845,6 +849,144 @@ int main(void)
 	}
 	
 	
+	return 0;
+}
+```
+
+
+# Patterns
+
+## Q1
+Right Half Pyramid Pattern in C
+
+```
+Test Data :
+5
+
+Expected Output:
+*     
+* *      
+* * *     
+* * * *
+* * * * * 
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	variable declaration 
+	int count, i,j;
+	
+//	get user inputs 
+	printf("Enter count: ");
+	scanf("%d", &count);
+	
+//	display output using for loop
+	for(i=1; i<= count; i++ )
+	{
+		for(j=1; j<=i; j++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+```
+
+## Q2
+Left Half Pyramid Pattern in C
+
+```
+Test Data :
+5
+
+Expected Output:
+    *
+   **
+  ***
+ ****
+*****
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	variable declaration 
+	int row_count, i,j, k;
+	
+//	get user inputs 
+	printf("Enter count: ");
+	scanf("%d", &row_count);
+	
+//	display output using for loop
+	for(i=1; i<= row_count; i++ )
+	{	
+		for(j=1; j<=(row_count - i); j++)
+		{
+			printf(" ");
+		}
+		for(k=1; k<=i; k++)
+		{
+			printf("*");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+```
+
+## Q3
+Full Pyramid Pattern in C
+
+```
+Test Data :
+5
+
+Expected Output:
+         *           
+       * * *         
+     * * * * *             
+   * * * * * * *         
+ * * * * * * * * *   
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	variable declaration 
+	int row_count, i, j ,k, q;
+	
+//	get user inputs 
+	printf("Enter count : ");
+	scanf("%d", &row_count);
+	
+//	display output using for loop
+	for(i=1; i<= row_count; i++ )
+	{	
+		for(j=1; j<=(row_count - i); j++)
+		{
+			printf(" ");
+		}
+		for(k=1; k<=(i * 2 -1); k++)
+		{
+			printf("*");
+		}
+		for(q=1; q<=(row_count - i); q++)
+		{
+			printf(" ");
+		}
+		printf("\n");
+	}
 	return 0;
 }
 ```
