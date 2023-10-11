@@ -1,11 +1,5 @@
 /*
-Write a C program that accepts three integers and finds the maximum of three
-Test Data :
-Input the first integer: 25
-Input the second integer: 35
-Input the third integer: 15
-Expected Output:
-Maximum value of three integers: 35
+Write a C program that reads 5 numbers and counts the number of positive numbers and negative numbers.
 */
 
 #include <stdio.h>
@@ -13,36 +7,31 @@ Maximum value of three integers: 35
 int main(void)
 {
 //	variables declarations 
-	int num1, num2, num3, max_num;
+	int negative_num_count=0 , positive_num_count=0 , num , count;
 	
-//	get user inputs 
-	printf("Input the first integer: ");
-	scanf("%d", &num1);
-	
-	printf("Input the second integer: ");
-	scanf("%d", &num2);
-	
-	printf("Input the third integer: ");
-	scanf("%d", &num3);
-	
-//	calculate max numer using ternary conditional operators 
-	max_num = (num2 > num1) ? ((num2 > num3) ? num2 : num3) : (num1> num3)? num1 : num3;
-
-//	calculate max numer using if else conditional operators 
-//	if(num2 > num1 ){
-//		if(num2 > num3){
-//			max_num = num2;
+	for(count=0; count<5 ; count++)
+	{
+//		get user inouts 
+		printf("Enter your number : ");
+		scanf("%d", &num);
+		
+//		using ternary opeation
+		(num >=0 ) ? positive_num_count++ : negative_num_count++;
+		
+//		using if else 
+//		if(num >= 0){
+//			positive_num_count++;
 //		}else{
-//			max_num = num3;
+//			negative_num_count++;
 //		}
-//	}else if(num1 > num3){
-//		max_num = num1;
-//	}else{
-//		max_num = num3;
-//	}
+		
+
+	}
 	
-//	display output
-	printf("Maximum value of three integers: %d", max_num);
+//	display outputs
+	printf("%d\n", positive_num_count);
+	printf("%d", negative_num_count);
 	
+
 	return 0;
 }

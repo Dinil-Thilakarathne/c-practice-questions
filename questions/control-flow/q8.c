@@ -1,23 +1,28 @@
-// Given a five digit integer, print the sum of its digits.
+/*
+Write a C program to check whether a given integer is positive even, negative even, positive odd or negative odd. Print even if the number is 0.
+Test Data :
+Input an integer: 13
+Expected Output:
+Positive Odd
+*/
+
 #include <stdio.h>
 
-int main() {
+int main(void)
+{
+//	variables declarations 
+	int num;
 	
-    //	variables decralation
-    int n, sum;
-
-    // get user inout 
-    printf("Enter your number : ");
-    scanf("%d", &n);
-
-    // calculate sum 
-    while (n >0) {
-        sum += n %10;
-        n /= 10;
-    }
-
-    // display output
-    printf("%d", sum);
-
-    return 0;
+//	get user input 
+	printf("Enter your number : ");
+	scanf("%d", &num);
+	
+//	display output 
+	if(num >= 0){
+		(num %2 ==0) ? printf("Positive even") : printf("Positive odd");
+	}else{
+		(num % 2 == 0) ? printf("Negative even") : printf("Negative odd");
+	}
+	
+	return 0;
 }

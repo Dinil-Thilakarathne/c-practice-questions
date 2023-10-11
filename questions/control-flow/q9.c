@@ -1,13 +1,15 @@
 /*
-Write a C program that reads 5 numbers and sums all odd values between them.
+Write a C program to read temperature in centigrade and display a suitable message according to the temperature state below:
+Temp < 0 then Freezing weather
+Temp 0-10 then Very Cold weather
+Temp 10-20 then Cold weather
+Temp 20-30 then Normal in Temp
+Temp 30-40 then Its Hot
+Temp >=40 then Its Very Hot
 Test Data :
-Input the first number: 11
-Input the second number: 17
-Input the third number: 13
-Input the fourth number: 12
-Input the fifth number: 5
-Expected Output:
-Sum of all odd values: 46
+42
+Expected Output :
+Its very hot.
 */
 
 #include <stdio.h>
@@ -15,40 +17,24 @@ Sum of all odd values: 46
 int main(void)
 {
 //	variables declarations 
-	int num_1, num_2, num_3, num_4, num_5, sum;
+	int temp;
 	
-//	get user inputs 
-	printf("Input the first number: ");
-	scanf("%d", &num_1);
+//	get user input 
+	printf("Enter Temperature: ");
+	scanf("%d", &temp);
 	
-	printf("Input the second number: ");
-	scanf("%d", &num_2);
-	
-	printf("Input the third number: ");
-	scanf("%d", &num_3);
-	
-	printf("Input the fourth number: ");
-	scanf("%d", &num_4);
-	
-	printf("Input the fifth number: ");
-	scanf("%d", &num_5);
-	
-	if(num_1 % 2 !=0){
-		sum+=num_1;
+//	check the value of temperature and display output 
+	if(temp >= 40){
+		printf("Its very hot");
+	}else if(temp >= 30){
+		printf("Its Hot");
+	}else if(temp >= 20){
+		printf("Cold weather");
+	}else if(temp >= 10){
+		printf("Very Cold weather");
+	}else{
+		printf("Freezing weather");
 	}
-	if(num_2 % 2 !=0){
-		sum+=num_2;
-	}
-	if(num_3  % 2 !=0){
-		sum+=num_3;
-	}
-	if(num_4 % 2 !=0){
-		sum+=num_4;
-	}
-	if(num_5 % 2 != 0){
-		sum+=num_5;
-	}
-	
-	printf("Sum of all odd values: %d", sum);
+
 	return 0;
 }

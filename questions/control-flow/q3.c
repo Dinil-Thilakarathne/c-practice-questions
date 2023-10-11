@@ -1,24 +1,23 @@
-// input integer numbers from the keyboard and calculate total and display it until user inputs -1.
- 
+// Given a five digit integer, print the sum of its digits.
 #include <stdio.h>
 
-int main(void)
-{
-//	decalre variables 
-	int num,tot = 0;
+int main() {
 	
-//	get user input and assign value to num variable
-	printf("Enter your number : ");
-	scanf("%d", &num);
-	
-	while(num != -1)
-	{
-		tot+=num;
-//		printf("total is : %d\n", tot);
-		
-		printf("Enter your next number ( Enter -1 for stop)  :");
-		scanf("%d", &num);
-	}
-	printf("total is : %d\n", tot);
+    //	variables decralation
+    int n, sum;
 
+    // get user inout 
+    printf("Enter your number : ");
+    scanf("%d", &n);
+
+    // calculate sum 
+    while (n >0) {
+        sum += n %10;
+        n /= 10;
+    }
+
+    // display output
+    printf("%d", sum);
+
+    return 0;
 }
