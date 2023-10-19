@@ -16,7 +16,7 @@ int main(void)
 		{
 			printf(" ");
 		}
-		for(k=1; k<=(i * 2 -1); k++)
+		while
 		{
 			printf("%d", k);
 		}
