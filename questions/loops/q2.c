@@ -17,8 +17,10 @@ int main(void)
     int num, i, j;
 
     // get user input and asign its value into num variable 
-    printf("Enter your number: ");
+    printf("Input upto the table number starting from 1 :");
     scanf("%d", &num);
+
+    printf("Multiplication table from 1 to %d", num);
 
     for (i = 1; i <=10; i++)
     {

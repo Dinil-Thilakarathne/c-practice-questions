@@ -26,6 +26,13 @@
 	- [Q1](#q1-3)
 	- [Q2](#q2-3)
 	- [Q3](#q3-3)
+	- [Q4](#q4-3)
+	- [Q5](#q5-2)
+	- [Q7](#q7-1)
+	- [Q8](#q8-1)
+- [Loops](#loops)
+	- [Q1](#q1-4)
+	- [Q2](#q2-4)
 
 # Basic
 
@@ -988,5 +995,262 @@ int main(void)
 		printf("\n");
 	}
 	return 0;
+}
+```
+
+## Q4
+Inverted Left Half Pyramid Pattern in C
+
+```
+Test Data :
+
+
+Expected Output:
+
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // variable declration
+    int row_count, i, k, j;
+
+    // get user inputs 
+    printf("Enter row count : ");
+    scanf("%d", &row_count);
+
+    for(i=0; i<row_count; i++)
+    {
+
+        for(j=i; j>0; j--)
+        {
+            printf(" ");
+        }
+        for(k=row_count-i; k>=1; k--)
+        {
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+```
+
+## Q5
+Inverted Left Half Pyramid Pattern in C
+
+```
+Test Data :
+
+
+Expected Output:
+
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+//	variable declaration 
+	int row_count, i, j ,k, q;
+	
+//	get user inputs 
+	printf("Enter count : ");
+	scanf("%d", &row_count);
+	
+//	display output using for loop
+	for(i=1; i<= row_count; i++ )
+	{	
+		for(j=1; j<=(row_count - i); j++)
+		{
+			printf(" ");
+		}
+		for(k=1; k<=(i * 2 -1); k++)
+		{
+			printf("%d", k);
+		}
+		for(q=1; q<=(row_count - i); q++)
+		{
+			printf(" ");
+		}
+		printf("\n");
+	}
+	return 0;
+}
+```
+
+## Q7
+Write a program in C to make such a pattern like a right angle triangle with the number increased by 1.
+
+
+```
+Test Data :
+	4
+
+Expected Output:
+   1
+   2 3
+   4 5 6
+   7 8 9 10
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // declare variables 
+    int row_count, i, j, num =1;
+
+    // get user input and asign its values to the row_count variable
+    printf("Enter your number: ");
+    scanf("%d", &row_count);
+
+    for ( i = 1; i <= row_count; i++)
+    {
+        for ( j = 1; j <= i; j++)
+        {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+        
+    }
+    
+    return 0;
+}
+```
+
+## Q8
+Write a program in C to make such a pattern like a right angle triangle with the number increased by 1.
+
+```
+Test Data :
+	4
+
+Expected Output:
+   1 
+  2 3 
+ 4 5 6 
+7 8 9 10 
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // declare variables 
+    int row_count, i, j, k, num =1;
+
+    // get user input and asign its values to the row_count variable
+    printf("Enter your number: ");
+    scanf("%d", &row_count);
+
+    for ( i = 1; i <= row_count; i++)
+    {
+//    	print spaces 
+        for ( k = 1; k <= (row_count - i); k++)
+        {
+            printf(" ");
+        }
+        
+//        print number 
+        for ( j = 1; j <= i; j++)
+        {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+        
+    }
+    
+    return 0;
+}
+```
+
+# Loops
+
+## Q1
+Write a program in C to display the multiplication table for a given integer.
+
+
+```
+Test Data :
+Input the number (Table to be calculated) : 15
+
+Expected Output:
+15 X 1 = 15
+...
+...
+15 X 10 = 150
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // declare variables 
+    int num, i;
+
+    // get user input and asign value to num variable 
+    printf("Input the number (Table to be calculated) :");
+    scanf("%d", &num);
+
+    for ( i = 1; i <= num; i++)
+    {
+        printf("%d X %d = %d\n", num, i , num * i);
+    }
+
+    return 0;
+    
+}
+```
+
+## Q2
+Write a program in C to display the multiplier table vertically from 1 to n.
+
+
+```
+Test Data :
+Input upto the table number starting from 1 : 8
+
+Expected Output:
+Multiplication table from 1 to 8
+1x1 = 1, 2x1 = 2, 3x1 = 3, 4x1 = 4, 5x1 = 5, 6x1 = 6, 7x1 = 7, 8x1 = 8
+...
+1x10 = 10, 2x10 = 20, 3x10 = 30, 4x10 = 40, 5x10 = 50, 6x10 = 60, 7x10 = 70,
+
+```
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // declare variables 
+    int num, i;
+
+    // get user input and asign value to num variable 
+    printf("Input the number (Table to be calculated) :");
+    scanf("%d", &num);
+
+    for ( i = 1; i <= num; i++)
+    {
+        printf("%d X %d = %d\n", num, i , num * i);
+    }
+
+    return 0;
+    
 }
 ```

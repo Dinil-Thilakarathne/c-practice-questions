@@ -17,7 +17,7 @@ int main(void)
     int num, i;
 
     // get user input and asign value to num variable 
-    printf("Enter your number: ");
+    printf("Input the number (Table to be calculated) :");
     scanf("%d", &num);
 
     for ( i = 1; i <= num; i++)
