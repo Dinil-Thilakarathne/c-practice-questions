@@ -8,6 +8,19 @@ int main(void)
 
     FILE *ptr;
 
+    ptr = fopen("answer.dat", "w");
+
+    for ( i = 0; i < 5; i++)
+    {
+        printf("Enter your Student Id and marks: ");
+        scanf("%s %d %d %d %d", stuID, &answArr[0], &answArr[1],&answArr[2],&answArr[3]);
+        puts("");
+        fprintf(ptr, "%s %d %d %d %d\n", stuID, &answArr[0], &answArr[1],&answArr[2],&answArr[3]);
+    }
+    
+    fclose(ptr);
+    
+
     ptr = fopen("answers.dat", "r");
 
     if (ptr == NULL)
